@@ -147,8 +147,6 @@ PARAM_DEFINE_INT32(MNT_MAN_YAW, 0);
 * @value 1 Stabilize all axis
 * @value 2 Stabilize yaw for absolute/lock mode.
 * @value 3 Stabilize pitch for absolute/lock mode.
-* @min 0
-* @max 2
 * @group Mount
 */
 PARAM_DEFINE_INT32(MNT_DO_STAB, 0);
@@ -192,7 +190,6 @@ PARAM_DEFINE_FLOAT(MNT_RANGE_ROLL, 90.0f);
 * @group Mount
 */
 PARAM_DEFINE_FLOAT(MNT_RANGE_YAW, 360.0f);
-
 
 /**
 * Offset for pitch channel output in degrees.
