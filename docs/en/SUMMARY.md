@@ -63,6 +63,7 @@
     - [Altitude/Position Controller Tuning Guide](config_fw/position_tuning_guide_fixedwing.md)
     - [Weight & Altitude Tuning](config_fw/weight_and_altitude_tuning.md)
     - [Trimming Guide](config_fw/trimming_guide_fixedwing.md)
+    - [Gain compression](config_fw/gain_compression.md)
   - [Flying (Basics)](flying/basic_flying_fw.md)
   - [Flight Modes](flight_modes_fw/index.md)
     - [Position Mode (FW)](flight_modes_fw/position.md)

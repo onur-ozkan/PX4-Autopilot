@@ -17,3 +17,4 @@ The main steps are:
 
 - [Fixed-wing Altitude/Position Controller Tuning Guide](../config_fw/position_tuning_guide_fixedwing.md)
 - [Fixed-wing Trimming Guide](../config_fw/trimming_guide_fixedwing.md)
+- [Fixed-wing automatic gain compression](../config_fw/gain_compression.md)
