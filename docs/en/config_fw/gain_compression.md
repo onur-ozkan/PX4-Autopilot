@@ -1,4 +1,5 @@
 # Gain compression
+
 Automatic gain compression reduces the gains of the angular-rate PID whenever oscillations are detected. It monitors the angular-rate controller output through a band-pass filter to identify these oscillations.
 
 This approach is a safe adaptive mechanism for stable aircraft: the PID gains remain unchanged when no oscillations are present, they are never increased beyond their nominal values, and they are bounded by a minimum limit.
@@ -7,7 +8,7 @@ Gain compression can help prevent actuator damage and even loss of the vehicle i
 
 ::: info
 Gain compression should be disabled during tuning to avoid over-tuning
-  :::
+:::
 
 ![Gain compression diagram](../../assets/config/fw/gain_compression_diagram.png)
 
