@@ -63,5 +63,34 @@ void OffboardChecks::checkAndReport(const Context &context, Report &reporter)
 
 		// This is a mode requirement, no need to report
 		reporter.failsafeFlags().offboard_control_signal_lost = !offboard_available;
+
+		if (!offboard_available && reporter.mavlink_log_pub()) {
+			mavlink_log_critical(
+				reporter.mavlink_log_pub(),
+				"Offboarding failed.\n"
+				"position:%d\n"
+				"velocity:%d\n"
+				"acceleration:%d\n"
+				"attitude:%d\n"
+				"body_rate:%d\n"
+				"thrust_and_torque:%d\n"
+				"direct_actuator:%d\n"
+				"data_is_recent:%d\n"
+				"local_position_invalid:%d\n"
+				"local_velocity_invalid:%d\n"
+				"attitude_invalid:%d\t",
+				(int)offboard_control_mode.position,
+				(int)offboard_control_mode.velocity,
+				(int)offboard_control_mode.acceleration,
+				(int)offboard_control_mode.attitude,
+				(int)offboard_control_mode.body_rate,
+				(int)offboard_control_mode.thrust_and_torque,
+				(int)offboard_control_mode.direct_actuator,
+				(int)data_is_recent,
+				(int)reporter.failsafeFlags().local_position_invalid,
+				(int)reporter.failsafeFlags().local_velocity_invalid,
+				(int)reporter.failsafeFlags().attitude_invalid
+			);
+		}
 	}
 }
